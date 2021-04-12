@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @font-face {
+        font-family: kontora;
+        src: url(images/kontora.otf);
+    }
+
+    @font-face {
+        font-family: made;
+        src: url(images/made.otf);
+    }
+
+    @font-face {
+        font-family: hatlight;
+        src: url(images/hatlight.otf);
+    }
+
+    @font-face {
+        font-family: belleza;
+        src: url(images/belleza.ttf);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        background-color: black;
+        /* color: goldenrod; */
+        background-image: url(images/granite.png);
+    }
+
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        /* padding: 10px 10px; */
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        padding: 8px;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+    /* .row {
+        background-color: rgba(0, 0, 0, 0.5);
+    } */
+
+    #buttontext {
+        color: #000;
+    }
+
+    #buttontext:hover {
+        color: black;
+    }
+
+    #learnmorephone {
+        margin: 2%;
+        /* color: black; */
+        z-index: 300;
+        -webkit-appearance: none;
+        background: -webkit-gradient(to right, #F3CE78 0%, #a2ccb6 50%, #F3CE78 100%);
+        background: linear-gradient(to right, #F3CE78 0%, #a2ccb6 50%, #F3CE78 100%);
+        background-size: 500%;
+        border: none;
+        border-radius: 5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        color: #000;
+        cursor: pointer;
+        font: 0.9em Cinzel, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 3rem;
+        letter-spacing: .05em;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 10rem;
+    }
+
+    .collection-tabs {
+        display: flex;
+        align-items: center;
+        padding-left: 1%;
+        margin-bottom: 5%;
+    }
+
+    .tab-button {
+        display: inline-block;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid transparent;
+        margin: 0 0.3 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-weight: 300;
+        color: #fcd47f;
+        text-align: center;
+        transition: all 0.2s;
+        margin: 10px;
+        background-color: transparent;
+        font-family: "Playfair Display";
+        font-size: 15px;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="collection.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom-Made: Samaara Jewellery</title>
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif" sizes="16x16">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="loader"></div>
+    <style>
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            overflow: hidden;
+            background: #000 url('./images/loader.gif') no-repeat center center;
+            background-size: 500px;
+        }
+    </style> -->
+    <!-- NAVIGATION STARTS -->
+    <div id="rc_logo">
+        <a href="main.html" title="Logo"><img src="images/samaaralogo1.png" style="width: 80px;"></a>
+        <!-- Swap this placeholder out for your logo image -->
+    </div>
+
+    <div class="rc_nav overlay" id="centered_nav">
+        <!-- <a href="index.html" title="Home" style="font-family: 'hatlight';"><img src="images/samaaralogo1.png" style="width: 80px;"></a> -->
+        <!-- <a href="about.html" title="Services" style="font-family: 'hatlight';">Home</a> -->
+        <a href="aboutphone.html" title="Services" style="font-family: 'hatlight';">Our Story</a>
+        <a href="catalogphone1.html" title="About" style="font-family: 'hatlight';">Explore Our Work</a>
+        <a href="shopphone.html" title="Contact" style="font-family: 'hatlight';">Jewellery Themes</a>
+        <a href="contact.html" title="Contact" style="font-family: 'hatlight';">Contact us</a>
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon"
+            onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <!-- Header -->
+    <!-- <div class="header"> -->
+    <!-- <a href="index.html"><img src="images/samaaralogo1.png" style="width: 200px;" alt=""></a> -->
+    <!-- <h1 style="font-family: hatlight; color: #F4C96F; font-size: 40px; text-transform: uppercase;">Our Jewellery
+            Catalog</h1>
+        <a href="custommore.html"><button id="learnmorephone">
+                <p id="buttontext"
+                    style="font-family: cinzel; text-transform: uppercase; font-weight: 100; font-size: 14px;">Learn
+                    More</p>
+            </button>
+        </a>
+    </div> -->
+
+    <div class="head-container" style="align-items: center;">
+        <div class="col-sm-6 head-image">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/12.jpg" style="margin-bottom: 50px;">
+        </div>
+        <div class="col-sm-6 head-para">
+            <p
+                style="font-family: 'hatlight';color: #F4C96F; padding: 0 5%; margin-bottom: 5%; font-size: 25px; text-align: center;">
+                Welcome to our Jewellery Collection. We have some of our most beautiful works on showcase here. Do have
+                a look.</p>
+        </div>
+    </div>
+
+    <div class="collection-tabs">
+        <button class="col-sm-4 tab-button active" style="font-family: 'hatlight'; padding-left: 3%;"
+            onclick="openCity('Classic Jewellery')">Classic Jewellery</button>
+        <button class="col-sm-4 tab-button" style="font-family: 'hatlight'; padding-left: 3%;"
+            onclick="openCity('Transformative Jewellery')">Transformative Jewellery</button>
+        <button class="col-sm-4 tab-button" style="font-family: 'hatlight'; padding-left: 3%;"
+            onclick="openCity('Sustainable Jewellery')">Sustainable Jewellery</button>
+    </div>
+
+    <div id="Classic Jewellery" class="city">
+        <div class="collection">
+            <p id="heading" style="font-family: 'hatlight'; font-size: 20px; color: #F4C96F; text-align: center;">Latest
+                collection in
+                Classic Jewellery
+            </p>
+            <p
+                style="font-family: 'kontora'; font-size: 18px; color:#ABAAA7; text-align: center; align-items: center; margin: 10px 50px 0 50px;">
+                I just want to be timeless yet timely, eternal yet exclusive/rare and suave at the same time. Call me
+                traditional,
+                bridal, ancient, antique or the one who adores kaarigari; invariably inspiring people to have a piece of
+                their own. I
+                take pride in the traditional ways.
+            </p>
+        </div>
+        <!-- Photo Grid -->
+        <div class="row">
+            <div>
+                <div class="row some-cards">
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/1.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/2.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/3.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/4.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/5.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/6.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/7.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/8.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/9.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/10.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/11.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/12.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/13.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/14.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/15.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/16.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/17.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/18.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/19.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/20.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/21.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/22.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/23.jpg" loading="lazy">
+
+                    </div>
+                    <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                        <img src="images/Web-main-images/samaaramainimages/Classicmain/24.jpg" loading="lazy">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="Transformative Jewellery" class="city" style="display:none">
+        <div class="collection">
+            <p id="heading" style="font-family: 'hatlight'; font-size: 18px; color: #F4C96F;">Latest collection in
+                Transformative Jewellery
+            </p>
+            <p
+                style="font-family: 'kontora'; font-size: 18px; color:#ABAAA7; text-align: center; align-items: center; margin: 10px 50px 0 50px;">
+                Why should clothes have all the fun? I'm the ideal DIY; one accessory in many ways... Not to mention
+                I've got the bubbly
+                manner, just the right amount of mischief, and a magnetic charm that works on all. After all, life is a
+                matter of
+                jewellery choices at the right time.
+            </p>
+        </div>
+        <!-- Photo Grid -->
+        <div class="row">
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/1.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/2.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/3.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/4.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/5.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/6.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/7.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/8.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/9.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/10.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/11.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/12.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/13.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/14.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/15.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/16.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/17.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/18.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/19.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/20.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaaratransform/21.jpg" loading="lazy">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Sustainable Jewellery" class="city" style="display:none">
+        <div class="collection">
+            <p id="heading" style="font-family: 'hatlight'; font-size: 18px;color: #F4C96F;text-align: center;">Latest
+                collection in
+                Sustainable Jewellery
+            </p>
+            <p
+                style="font-family: 'kontora'; font-size: 18px; color:#ABAAA7; text-align: center; align-items: center; margin: 10px 50px 0 50px;">
+                Adorn me and I'll create a world where the environment doesn't need protection. Mindful about your chunk
+                in our world's
+                future? Don't worry, we have got you covered too. I love radiating Go Green vibes from miles away.
+            </p>
+        </div>
+        <!-- Photo Grid -->
+        <div class="row">
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/1.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/2.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/3.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/4.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/5.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/6.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/7.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/8.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/9.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/10.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/11.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/12.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/13.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/14.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/15.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/16.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/17.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/18.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/19.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/20.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.5s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/21.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="0.8s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/22.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.1s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/23.jpg" loading="lazy">
+
+            </div>
+            <div class="col-lg-4 prod wow fadeInUp" data-wow-delay="1.4s">
+
+                <img src="images/Web-main-images/samaaramainimages/samaarasus/24.jpg" loading="lazy">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row section shop">
+            <div class="col-lg-8">
+                <p class="wow fadeInUp" style="font-family:'kontora'; color: #F4C96F;" data-wow-delay="0.4s">"An object made with love is a direct line from one human heart to another."</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("centered_nav");
+            if (x.className === "rc_nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "rc_nav";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(cityName).style.display = "block";
+        }
+        let buttons = document.querySelectorAll('button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <!-- <script>
+        $(window).on("load", function () {
+            $(".loader").fadeOut("slow");
+        });
+    </script> -->
+</body>
+
+</html>

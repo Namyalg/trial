@@ -1,0 +1,197 @@
+body {
+    background-image: url(images/granite.png);
+}
+
+#card-heading {
+    padding: 5%;
+    font-size: 27px;
+}
+
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+
+#learnmorer-1 {
+    /* position: absolute;
+    z-index: 300;
+    top: 102%;
+    left: 28%; */
+    background-color: #fac75a;
+    background-size: 500%;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #000;
+    cursor: pointer;
+    font: 0.9em Cinzel, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 2rem;
+    letter-spacing: .05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    margin: 12% 0%;
+}
+
+#learnmorer-1:hover {
+    background-color: rgb(31, 30, 30);
+    color: #F4C96F;
+}
+
+#learnmorer-2 {
+    /* position: absolute;
+    z-index: 300;
+    top: 90%;
+    left: 25%; */
+    /* transform: translate(-50%, -50%); */
+    background-color: #fac75a;
+    background-size: 500%;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #000;
+    cursor: pointer;
+    font: 0.9em Cinzel, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 2rem;
+    letter-spacing: .05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    margin-bottom: 30%;
+}
+
+#learnmorer-2:hover {
+    background-color: rgb(31, 30, 30);
+    color: #F4C96F;
+}
+
+#learnmorer-3 {
+    /* position: absolute;
+    z-index: 300;
+    top: 102%;
+    left: 28%; */
+    background-color: #fac75a;
+    background-size: 500%;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #000;
+    cursor: pointer;
+    font: 0.9em Cinzel, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 2rem;
+    letter-spacing: .05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    margin-top: 8%;
+}
+
+#learnmorer-3:hover {
+    background-color: rgb(31, 30, 30);
+    color: #F4C96F;
+}
+
+/* @media screen and (min-width: 500px) and (max-width:900px) {
+    #learnmorer-1{
+          left: 38%;
+    }
+    #learnmorer-2{
+        top: 75%;
+        left: 38%;
+    }
+    #learnmorer-3{
+        left: 38%;
+  }
+} */
+
+#first, #second, #third {
+    z-index: 10;
+    margin-top: 8%;
+    position: relative;
+}
+
+#fourth {
+    z-index: 10;
+    margin-top: 18%;
+    position: relative;
+}
+
+.frame0-phone {
+    transform: rotate(180deg);
+}
+
+.frame1-phone {
+    width: 170%;
+    height: 170px;
+    position: relative;
+    left: -36%;
+}
+
+.frame2-phone {
+    width: 170%;
+    height: 170px;
+    position: relative;
+    left: -36%;
+}
+
+.frame3-phone {
+    width: 196%;
+    height: 111px;
+    position: relative;
+    left: -49%;
+}
+
+@media(min-width: 1024px) {
+
+
+    .frame0-phone {
+        transform: rotate(180deg);
+        width: 90%;
+        height: 170px;
+        position: relative;
+        left: 5%;
+    }
+
+    .frame1-phone {
+        width: 170%;
+        height: 170px;
+        position: relative;
+        left: -36%;
+    }
+    
+    .transformative {
+        top: -1% !important;
+    }
+    
+    .sustainable {
+        top: -4% !important;
+    }
+
+    .whycusjew {
+        left: 26%;
+    }
+
+    .ring {
+        margin-left: 14% !important;
+    }
+
+
+}

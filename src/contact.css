@@ -1,0 +1,476 @@
+@font-face {
+  font-family: kontora;
+  src: url(images/kontora.otf);
+}
+
+@font-face {
+  font-family: made;
+  src: url(images/made.otf);
+}
+
+@font-face {
+  font-family: hatlight;
+  src: url(images/hatlight.otf);
+}
+
+*,
+*::before,
+*::after{
+      margin: 0%;
+      padding: 0%;
+      box-sizing: inherit;
+}
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Larsseit";
+      font-weight: lighter;
+      box-sizing: border-box;
+}
+
+body{
+    overflow: auto;
+}
+
+body::-webkit-scrollbar
+{
+    display: none;
+}
+/* FAQ */
+/* section used for centering process */
+section{
+      width: 100%;
+      background-image: linear-gradient(black, rgb(0, 0, 0));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.content{
+      width: 100%;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+}
+
+.accordion-item{
+      background-color: #1E201E;
+      border-radius: .4rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: .5rem 2px .5rem rgba(0, 0, 0,.1);
+}
+
+.accordion-link{
+      font-size: 1.3rem;
+      color: #F4C96F;
+      font-family: "made";
+      font-style: italic;
+      text-decoration: none;
+      background-color: #1E201E;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+}
+.accordion-link:hover{
+      text-decoration: none;
+      color: #F4C96F;
+}
+.accordion-link i{
+      color: #e7d5ff;
+      padding: .5rem;
+
+}
+
+.accordion-link #remove{
+      display: none;
+
+}
+
+.answer{
+      overflow: hidden;
+      max-height: 0;
+      position: relative;
+      color: rgb(122, 122, 122);
+      font-size: 1.4rem;
+      transition: max-height 850ms;
+}
+
+.answer::before{
+      content: "";
+      position: absolute;
+      width: .6rem;
+      height: 90%;
+      background-color: #F4C96F;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      
+}
+
+.answer p{
+      color: rgb(122, 122, 122);
+      font-size: 1.4rem;
+      padding: 2rem;
+}
+
+.accordion-item:target .answer{
+      max-height: 80rem;
+}
+
+.accordion-item:target .accordion-link #add{
+      display: none;
+}
+
+.accordion-item:target .accordion-link #remove{
+      display: block;
+}
+
+
+
+/* NAVIGATION BAR */
+
+.nav {
+      z-index: 1;
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      background-color: #000;
+}
+
+.nav.scrolled {
+      background-color: #000 !important;
+      transition: background-color 300ms linear;
+}
+
+#client{
+      font-size: larger;
+
+}
+
+.menu-open {
+      position: absolute;
+      line-height: 60px;
+      left: 1.4em;
+      cursor: pointer;
+}
+
+.brand span a {
+      position: absolute;
+      line-height: 60px;
+      left: 50%;
+      top: -40%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 4px;
+}
+
+.brand a:hover {
+      text-decoration: none;
+}
+
+.cart {
+      position: absolute;
+      line-height: 60px;
+      right: 1.4em;
+      font-weight: 300;
+      color: #F4C96F;
+}
+
+/* MENU */
+
+.menu {
+      position: fixed;
+      z-index: 2;
+      width: 30%;
+      left: -30%;
+      height: 100vh;
+      background: #fff;
+      border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.menu-open {
+      color: #F4C96F;
+}
+
+@media(max-width: 900px) {
+      .menu {
+            width: 100%;
+            left: -100%;
+      }
+}
+
+.menu-close {
+      position: relative;
+      line-height: 60px;
+      float: right;
+      margin-right: 20px;
+}
+
+.menu ul {
+      list-style: none;
+      position: relative;
+      top: 40%;
+      left: 10%;
+      transform: translate(0%, -50%);
+}
+
+.menu ul li {
+      padding-bottom: 20px !important;
+}
+
+.menu ul li a {
+      font-size: 12px;
+}
+
+.menu ul li a:hover {
+      text-decoration: none;
+}
+
+.media-menu {
+      position: relative;
+      top: 50%;
+}
+
+.media-menu ul li {
+      display: inline-block;
+      padding-right: 10px;
+}
+
+
+
+/* Defining general properties for media icons used across the template */
+
+.media {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      margin-right: 20px;
+}
+
+.media ul {
+      list-style: none;
+}
+
+.media ul li {
+      display: inline-block;
+      margin-right: 20px;
+}
+
+@media(max-width: 900px) {
+      .hero-image {
+            display: none;
+      }
+
+      .media {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+      }
+
+      .media ul {
+            margin-right: 0;
+      }
+}
+
+/* SECTON BASIC */
+
+.section {
+      padding: 80px 40px;
+}
+
+.section p {
+      font-family: "Playfair Display";
+      font-size: 24px;
+      font-weight: 300;
+}
+
+
+/* FOOTER */
+
+.footer {
+      padding: 30px 0;
+      background: #fff;
+}
+
+.block {
+      margin-top: 40px;
+}
+
+.footer .media {
+      top: 20px !important;
+}
+
+footer p {
+      text-align: center;
+      font-family: "Larsseit" !important;
+      font-size: 20px !important;
+      line-height: 40px;
+}
+
+#address{
+      font-family: "Larsseit" !important;
+      font-size: 20px !important;
+      line-height: 30px;
+      margin-top: -7%;
+}
+
+
+
+/* ABOUT PAGE */
+
+.hero {
+      height: 400px;
+      background: #f7f6f2;
+      position: relative;
+      background-image: url("images/goldbg2.jpg");
+      background-size: cover;
+}
+
+#hero-title {
+      position: absolute;
+      font-family: "hatlight";
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+
+}
+
+#Faq {
+      position: absolute;
+      font-family: "hatlight";
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 5rem;
+}
+
+
+/* .content {
+      margin: 50px 0;
+      width: 65% !important;
+} */
+
+@media(max-width: 900px) {
+      .content {
+            width: 90% !important;
+      }
+}
+
+
+
+#blockquote {
+      font-family: "Playfair Display";
+      font-style: italic;
+      font-size: 24px;
+      padding: 30px 20px;
+      margin: 20px 0;
+      border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.hero{
+      background-color: #5B080A;
+    background-image: url("images/redbg.jpg");
+    background-size: cover;
+}
+form label, textarea {
+      font-family: "made";
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+}
+
+.form-control {
+      box-shadow: none !important
+}
+
+form input, textarea {
+      border-radius: 0% !important;
+}
+
+form input:focus, textarea:focus {
+      outline: none !important;
+      border: 2px solid #000 !important;
+}
+
+
+#rc_logo {
+      left: 30px;
+      padding: 10px;
+      position: absolute;
+      color: #fff;
+      font-size: 19px;
+      font-family: Poppins;
+      text-decoration: none;
+     }
+
+.rc_nav {
+      overflow: hidden;
+      background-color: rgba(0, 0, 0);
+      text-align: center;
+      z-index: 6;
+}
+
+.rc_nav a {
+      display: inline-block;
+      margin-right: -4px;
+      /* inline-block gap fix */
+      color: #F4C96F !important;
+      padding: 22px 22px;
+      text-decoration: none;
+      font-family: Poppins;
+      font-size: 18px;
+      -webkit-transition: background 0.3s linear;
+      -moz-transition: background 0.3s linear;
+      -ms-transition: background 0.3s linear;
+      -o-transition: background 0.3s linear;
+      transition: background 0.3s linear;
+      z-index: 9;
+}
+
+.rc_nav .icon {
+      display: none;
+}
+
+.rc_content {
+      text-align: center;
+      padding-left: 14px;
+      font-family: Poppins;
+      margin-top: 100px;
+      color: #F4C96F;
+}
+
+@media screen and (max-width: 1020px) {
+      .rc_nav a {
+            display: none;
+      }
+      .rc_nav a.icon {
+            float: right;
+            display: block;
+            width: 60px;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+      .rc_nav.responsive .icon {
+            position: fixed;
+            right: 0;
+            top: 0;
+      }
+      .rc_nav.responsive a {
+            float: none;
+            display: block;
+            text-align: center;
+      }
+}
+

@@ -1,0 +1,910 @@
+@font-face {
+      font-family: kontora;
+      src: url(images/kontora.otf);
+}
+
+@font-face {
+      font-family: made;
+      src: url(images/made.otf);
+}
+
+@font-face {
+      font-family: hatlight;
+      src: url(images/hatlight.otf);
+}
+
+@font-face {
+      font-family: belleza;
+      src: url(images/belleza.ttf);
+}
+
+* {
+      margin: 0;
+}
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "made";
+      font-weight: lighter;
+      /* background-color: black; */
+      /* overflow-x: hidden; */
+}
+
+.overlay {
+      background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+body {
+      overflow: auto;
+}
+
+body::-webkit-scrollbar {
+      display: none;
+}
+
+.loader{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      overflow: hidden;
+      background: #000 url('./images/loader.gif') no-repeat center center;
+      background-size: 500px;
+  }
+
+/* HERO SECTION */
+
+.hero-section {
+      height: 100vh;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hero-left {
+      height: 90vh;
+      z-index: -1;
+}
+
+.tagline {
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 40px;
+      font-family: "made";
+      font-size: 24px;
+      font-weight: 300;
+}
+
+a {
+      /* color: grey !important; */
+      font-family: "Larsseit";
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+}
+
+.shipping {
+      position: absolute;
+      bottom: 30px;
+      margin-left: 40px;
+      font-size: 14px;
+      font-weight: 300;
+}
+
+.hero-right {
+      height: 90vh;
+      /* background-image: url("images/custom1.jpg"); */
+      background-size: cover;
+      /* border-radius: 12% 46% 0% 86% / 60% 0% 22% 100% ; */
+}
+
+.hero-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+img {
+      width: 100%;
+}
+
+/* Defining general properties for media icons used across the template */
+
+.media {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      margin-right: 20px;
+}
+
+.media ul {
+      list-style: none;
+}
+
+.media ul li {
+      display: inline-block;
+      margin-right: 20px;
+}
+
+@media(max-width: 900px) {
+      .hero-image {
+            display: none;
+      }
+      .media {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+      }
+      .media ul {
+            margin-right: 0;
+      }
+}
+
+/* SECTON BASIC */
+
+.section {
+      padding: 80px 40px;
+}
+
+.section p {
+      font-family: "kontora";
+      font-size: 24px;
+      font-weight: 300;
+}
+
+/* PRODUCT / BANNER SEC */
+
+.prod {
+      margin-top: 20px;
+}
+
+.prod:hover a {
+      text-decoration: none !important;
+}
+
+#prod-desc {
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #F4C96F;
+}
+
+.prod-sec {
+      width: 101%;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prod-sec p {
+      font-family: "Playfair Display";
+      font-size: 24px;
+      font-weight: 300;
+}
+
+#story {
+      font-family: "Playfair Display";
+      font-size: 32px;
+      font-weight: 300;
+}
+
+#storypara {
+      font-family: "Playfair Display";
+      font-size: 20px;
+      font-weight: 300;
+}
+
+@media(max-width: 900px) {
+      .prod-sec {
+            padding-left: 30px;
+            width: 100%;
+            border: none;
+      }
+      .prod-sec a {
+            display: none;
+      }
+}
+
+#price {
+      font-family: "kontora";
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #F4C96F;
+}
+
+.prod-list #prod-desc {
+      font-family: "Larsseit";
+      color: #F4C96F;
+}
+
+#test {
+      font-family: "Playfair Display";
+      font-size: 30px;
+      font-weight: 300;
+      color: #F4C96F;
+}
+
+#card-heading {
+      font-family: "Playfair Display";
+      font-size: 30px;
+      font-weight: 300;
+      color: #F4C96F;
+      text-transform: uppercase;
+}
+
+#quote {
+      font-family: "Playfair Display";
+      font-size: 30px;
+      font-weight: 300;
+      color: #F4C96F;
+      padding-bottom: 2%;
+}
+
+/* FOOTER */
+
+.footer {
+      padding: 30px 0;
+      background: #fff;
+}
+
+.block {
+      margin-top: 40px;
+}
+
+.footer .media {
+      top: 20px !important;
+}
+
+footer p {
+      text-align: center;
+      font-family: "Larsseit" !important;
+      font-size: 20px !important;
+      line-height: 40px;
+}
+
+#address {
+      font-family: "Larsseit" !important;
+      font-size: 20px !important;
+      line-height: 30px;
+      margin-top: -7%;
+}
+
+/* SHOP Page */
+
+.whitespaces {
+      height: 100px;
+}
+
+.collection {
+      padding: 40px 0;
+      /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+}
+
+.collection #heading {
+      font-family: "Playfair Display";
+      font-size: 20px;
+      margin-left: 50px;
+      padding-bottom: 0;
+      position: relative;
+      display: inline-block;
+}
+
+#heading::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      border-bottom: 1px solid #ece1b6;
+}
+
+.collection .section {
+      margin: -50px 0;
+}
+
+/* PRODUCT PAGE */
+
+.product-sec {
+      padding-top: 60px;
+      height: 100vh;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 900px) {
+      .product-sec {
+            margin-bottom: 140px;
+            border-bottom: none !important;
+      }
+}
+
+.prod-left {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prod-opt {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+}
+
+#prod-name {
+      font-family: "Playfair Display";
+}
+
+.prod-opt #price {
+      padding: 16px 0;
+}
+
+.input-helper {
+      position: relative;
+      display: inline-block;
+      font-family: "Larsseit";
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 4px;
+}
+
+.input-helper:before {
+      content: '';
+      display: block;
+      position: absolute;
+}
+
+.input-helper--radio {
+      padding-left: 18px;
+}
+
+.input-helper--radio:before {
+      top: 2px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #222;
+}
+
+input[type="radio"] {
+      display: none;
+}
+
+input[type="radio"]:checked+label:before {
+      background: #222;
+}
+
+.product-sec ::placeholder, input {
+      font-family: "Larsseit";
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 4px;
+      padding-left: 10px;
+      padding-bottom: 3px;
+}
+
+.product-sec input {
+      width: 130px;
+}
+
+@media(max-width: 900px) {
+      .product-sec .hero-image {
+            margin-top: 50%;
+            display: block !important;
+            height: 100vh;
+      }
+      .prod-opt {
+            padding-top: 300px;
+      }
+}
+
+.add-prod {
+      margin: 50px 0;
+}
+
+.add-prod a {
+      padding: 20px 40px;
+      background: #000;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #fff !important;
+      text-decoration: none;
+}
+
+.add-prod a:hover {
+      text-decoration: none;
+}
+
+/* ABOUT PAGE */
+
+.hero {
+      height: 400px;
+      background: #f7f6f2;
+      position: relative;
+}
+
+#hero-title {
+      position: absolute;
+      font-family: "Playfair Display";
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+.content {
+      margin: 50px 0;
+      width: 65% !important;
+}
+
+@media(max-width: 900px) {
+      .content {
+            width: 90% !important;
+      }
+}
+
+.content p {
+      font-family: "Larsseit";
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+}
+
+#blockquote {
+      font-family: "Playfair Display";
+      font-style: italic;
+      font-size: 24px;
+      padding: 30px 20px;
+      margin: 20px 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CONTACT */
+
+.hero {
+      background-color: black;
+      background-image: url("images/granite.png");
+      background-size: cover;
+      height: 35rem;
+}
+
+form label, textarea {
+      font-family: "Larsseit";
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+}
+
+.form-control {
+      box-shadow: none !important
+}
+
+form input, textarea {
+      border-radius: 0% !important;
+}
+
+form input:focus, textarea:focus {
+      outline: none !important;
+      border: 2px solid #000 !important;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */
+
+/* .btn-10{
+            margin: 0;
+            height: 100%;
+            /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+
+/* background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+        } */
+
+/* .button_container {
+            position: absolute;
+          left: 0;
+          right: 0;
+          top: 40%;
+        } */
+
+/* .btn100{
+          border: none;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          text-transform: uppercase;
+          outline: none;
+          overflow: hidden;
+          position: relative;
+          color:#000;
+          font-style: "Cinzel";
+          height: 50px;
+          width: 50px;
+          font-weight: 700;
+          font-size: 15px;
+          background-color: #fac249;
+          padding-left: 10%;
+          padding-right: 10%;
+          
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+        }
+        
+        .btn100 span {
+          position: relative; 
+          z-index: 1;
+        }
+        .btn100:hover{
+            color: #F4C96F;
+        }
+        
+        .btn100:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 350%;
+          width: 140%;
+          color: rgb(255, 255, 255);
+          background: black;
+          
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+          -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+          transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        }
+        
+        .btn100:hover:after {
+          -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+          transform: translateX(-9%) translateY(-25%) rotate(45deg); */
+
+/* } */
+
+#buttontext {
+      margin-top: 1%;
+      font-size: 17px;
+}
+
+#buttontext:hover {
+      color: #F4C96F;
+}
+
+
+#learnmore {
+      position: absolute;
+      z-index: 300;
+      top: 83%;
+      left: 4%;
+      background-color: #fac75a;
+      background-size: 500%;
+      border: none;
+      border-radius: 0.3rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      color: #000;
+      cursor: pointer;
+      font: 0.9em Cinzel, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      height: 2rem;
+      letter-spacing: .05em;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 10rem;
+}
+
+#learnmore:hover {
+      background-color: rgb(31, 30, 30);
+      color: #F4C96F;
+}
+
+#learnmore-right {
+      position: absolute;
+      z-index: 300;
+      top: 83%;
+      left: 4%;
+      background-color: #fac75a;
+      background-size: 500%;
+      border: none;
+      border-radius: 0.3rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      color: #000;
+      cursor: pointer;
+      font: 0.9em Cinzel, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      height: 2rem;
+      letter-spacing: .05em;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 10rem;
+}
+
+#learnmore-right:hover {
+      background-color: rgb(31, 30, 30);
+      color: #F4C96F;
+}
+
+button:hover {
+      animation-name: gradient;
+      -webkit-animation-name: gradient;
+      animation-duration: 2s;
+      -webkit-animation-duration: s;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+      0% {
+            background-position: 0% 50%;
+      }
+      100% {
+            background-position: 100%;
+      }
+}
+
+/* .link {
+          font-size: 20px;
+          margin-top: 30px;
+        }
+        
+        .link a {
+          color: #000;
+          font-size: 25px; 
+        } */
+
+.brand {
+      text-align: center;
+      background-color: black;
+}
+
+a:hover {
+      color: #fff !important;
+      text-decoration: none !important;
+}
+
+/* NEW NAVIGATION */
+
+#rc_logo {
+      left: 30px;
+      padding: 10px;
+      position: absolute;
+      color: #fff;
+      font-size: 19px;
+      font-family: Poppins;
+      text-decoration: none;
+}
+
+.rc_nav {
+      overflow: hidden;
+      background-color: rgba(0, 0, 0);
+      text-align: center;
+      z-index: 6;
+}
+
+.rc_nav a {
+      display: inline-block;
+      margin-right: -4px;
+      /* inline-block gap fix */
+      color: #F4C96F;
+      padding: 22px 22px;
+      text-decoration: none;
+      font-family: Poppins;
+      font-size: 18px;
+      -webkit-transition: background 0.3s linear;
+      -moz-transition: background 0.3s linear;
+      -ms-transition: background 0.3s linear;
+      -o-transition: background 0.3s linear;
+      transition: background 0.3s linear;
+      z-index: 9;
+}
+
+.rc_nav .icon {
+      display: none;
+}
+
+.rc_content {
+      text-align: center;
+      padding-left: 14px;
+      font-family: Poppins;
+      margin-top: 100px;
+      color: #F4C96F;
+}
+
+@media screen and (max-width: 1020px) {
+      .rc_nav a {
+            display: none;
+      }
+      .rc_nav a.icon {
+            float: right;
+            display: block;
+            width: 60px;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+      .rc_nav.responsive .icon {
+            position: fixed;
+            right: 0;
+            top: 0;
+      }
+      .rc_nav.responsive a {
+            float: none;
+            display: block;
+            text-align: center;
+      }
+}
+
+@media screen and (min-width: 900px) {
+      .resp{
+            display: none;
+      }
+}
+
+/* AUTOMNATIC IMAGE SLIDESHOW */
+
+.mySlides {
+      display: none;
+}
+
+img {
+      vertical-align: middle;
+}
+
+/* Slideshow container */
+
+/* .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+} */
+
+/* Caption text */
+
+.text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+/* .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+.active {
+      background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 8s;
+      animation-name: fade;
+      animation-duration: 8s;
+}
+
+.ring {
+      max-width: 350px;
+      height: auto;
+      margin-left: 25%;
+}
+
+@-webkit-keyframes fade {
+      from {
+            opacity: .3
+      }
+      to {
+            opacity: 1
+      }
+}
+
+@keyframes fade {
+      0% {
+            opacity: 0;
+      }
+      95% {
+            opacity: 1;
+      }
+      100% {
+            opacity: 0;
+      }
+      /* from {opacity: .3} 
+  to {opacity: 1} */
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+      .text {
+            font-size: 11px
+      }
+}
+
+@media only screen and (max-width: 768px) {
+      .ring {
+            max-width: 350px;
+            height: auto;
+            margin-left: 0;
+      }
+      #mainimg {
+            height: 50%;
+            width: auto;
+      }
+}
+
+.slideshow-container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -35%);
+      background-color: black;
+}
+.frame1{
+      width: 60%;
+      height: 112px;
+      position: relative;
+      top: 82px;
+      left: 19.5%;
+      /* margin-bottom: 10%; */
+}
+.frame2{
+      width: 80%;
+      height: 112px;
+      position: relative;
+      top: 82px;
+      left: 9.5%;
+}
+.frame3{
+      width: 65%;
+      height: 112px;
+      position: relative;
+      top: 82px;
+      left: 17%;
+}
+.frame0 {
+      
+      width: 26%;
+      height: 112px;
+      position: relative;
+      top: 129px;
+      left: 37%;
+      transform: rotate(180deg);
+  }
+
+/* body{
+      background-color: black;
+} */

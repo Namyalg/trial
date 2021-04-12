@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="aryan">
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif" sizes="16x16">
+    <title>Our Story - Samaara Jewellery</title>
+
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="about.css">
+
+
+    <!-- bootstrapcdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- icon pack -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- tweenmax (greensock) cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <style>
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            overflow: hidden;
+            background: #000 url('./images/loader.gif') no-repeat center center;
+            background-size: 500px;
+        }
+    </style>
+    <div class="about-container">
+
+        <!-- NAVIGATION STARTS -->
+
+        <div id="rc_logo">
+            <a href="home.html" title="Logo"><img src="images/samaaralogo1.png" style="width: 80px;"></a>
+            <!-- Swap this placeholder out for your logo image -->
+        </div>
+
+        <div class="rc_nav overlay" id="centered_nav">
+            <!-- <a href="index.html" title="Home" style="font-family: 'Playfair Display';"><img src="images/samaaralogo1.png" style="width: 80px;"></a> -->
+            <!-- <a href="about.html" title="Services" style="font-family: 'Playfair Display';">Home</a> -->
+            <a href="about.html" title="Services" style="font-family: 'Playfair Display';">Our Story</a>
+            <a href="catalog.html" title="About" style="font-family: 'Playfair Display';">Explore Our Work</a>
+            <a href="shop.html" title="Contact" style="font-family: 'Playfair Display';">Jewellery Themes</a>
+            <a href="contact.html" title="Contact" style="font-family: 'Playfair Display';">Contact us</a>
+            <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <!-- NAVIGATION ENDS -->
+
+        <!-- DATA SECTION STARTS -->
+        <div class="whole-container" style="background-image: linear-gradient(black, rgb(0, 0, 0));">
+            <div class="about-hero">
+                <div class="container-fluid hero wow fadeInUp">
+                    <h1 id="hero-title">OUR STORY</h1>
+                </div>
+
+                <div id="paranormal" class="container content" style="background-image: url(images/framedvd.png); background-size: cover; background-position: center;">
+                    <br><br><br><br><br><br>
+                    <p class="wow fadeInUp" data-wow-delay="0.5s" style="color: #7a7a7a">Every creation has its own story. Creating jewellery, that reveals intricate craftsmanship while being playful and
+                    innovative while offering a unique and surreal aesthetic; catering to the modern woman's desire for jewellery to be part
+                    of her personal identity.
+                    </p> <br>
+
+                    <p class="wow fadeInUp" data-wow-delay="0.6s" style="color: #7a7a7a">Thirtha spent a decade working with large multinational companies and the Big 4’s, spread across a variety of verticals
+                    which included strategic management, process improvements, and developing Quality Management Systems to name a few;
+                    before realizing her true calling for conceptualizing and creating precious jewellery.
+                    </p>
+
+                    <p id="blockquote" class="wow fadeInUp" data-wow-delay="0.7s">Her unique design sensibility represents the best of many worlds, and her creations are a delight to wear.</p>
+
+                    <p class="wow fadeInUp" data-wow-delay="0.6s" style="color: #7a7a7a">She took on a variety of roles at work and parallelly took on select projects of bespoke jewellery, just as they had
+                    envisioned it at work and piloted her entrepreneurial idea while still at corporate, finally deciding to take the
+                    plunge, only to find out that her startup would set a benchmark and impact people's lives daintly.
+                    </p> <br>
+                    <p class="wow fadeInUp" data-wow-delay="0.6s" style="color: #7a7a7a">She is driven by a passion for designing works of art through jewellery that recognises individual style. Her unique
+                    design sensibility represents the best of many worlds, and her creations are a delight to wear. Samaara Jewellery is
+                    also an IIM Bangalore NSRCEL pre-incubated venture focused on creating customized jewellery. Thirtha is a lifelong
+                    learner and has a Bachelor’s Degree in Commerce, Post Graduate Diploma in International Business, a Diploma in Jewellery
+                    Designing and still learning.</p><br>
+                    <p class="wow fadeInUp" data-wow-delay="0.6s" style="color: #7a7a7a">Today, she single-handedly runs and manages her jewellery startup, spends time influencing and nurturing young
+                    entrepreneurial minds through focused sessions and talks while also being an adoring mother of two amazing children.
+                </p><br><br><br><br><br>
+
+                </div>
+            </div>
+            <div class="slide-title">
+                <h1 id="slider-title" style="color: rgb(204, 157, 2); font-family: Playfair Display; margin: 5% 35%; font-size: 35px;">Jewellery in the Making</h1>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container" style="background-color: black; padding-bottom: 5%;">
+                <div class="swiper-wrapper" style="width: 200px; height: auto;">
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/1.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/2.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/3.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/4.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/5.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/6.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/7.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/8.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/9.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/10.jpg" alt="" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="images/Web-main-images/samaaramainimages/samaarastory1/11.jpg" alt="" loading="lazy"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next" style="color: rgb(204, 157, 2);"></div>
+                <div class="swiper-button-prev" style="color: rgb(204, 157, 2);"></div>
+            </div>
+        </div>
+
+
+        <style>
+            .swiper-container {
+                width: 60%;
+                height: auto;
+            }
+            
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+        </style>
+
+        <!-- DATA SECTION ENDS -->
+
+        <!-- FOOTER STARTS -->
+
+        <div class="container-fluid footer">
+            <div class="section container">
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-3 block">
+                            <p id="address">Samaara Jewellery, Old Airport road,
+                            <br> Bangalore – 17,
+                                <br> India
+                            </p>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <a href="faq.html"><p>FAQs
+                                <!-- <br> Return Policy -->
+                            </p></a>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <!-- <p>Press & Media -->
+                                <!-- <br> Shipping -->
+                            </p>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <div class="media">
+                                <ul>
+                                    <li>
+                                        <a class="logos" href="https://www.facebook.com/samaarajewellery">
+                                            <ion-icon name="logo-facebook" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="logos" href="https://www.instagram.com/samaara.jewellery">
+                                            <ion-icon name="logo-instagram" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <style>
+                                        .logos {
+                                            text-decoration: none;
+                                            color: black;
+                                            font-size: 20px;
+                                        }
+                                    </style>
+                                    <!-- <li>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                    </li>
+                                    <li>
+                                        <ion-icon name="logo-pinterest"></ion-icon>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- FOOTER ENDS -->
+    </div>
+
+    <script type="text/javascript">
+        //Scroll reveal animations
+
+        new WOW().init();
+
+        //Scroll activated background change
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $(".nav");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+        //Toggle MENU
+
+        var t1 = new TimelineMax({
+            paused: true
+        });
+        t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+        });
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", function() {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function() {
+            t1.reversed(!t1.reversed());
+        });
+
+
+        function myFunction() {
+            var x = document.getElementById("centered_nav");
+            if (x.className === "rc_nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "rc_nav";
+            }
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        window.onload = function getResolution() {
+            // alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+            if (screen.width <= 1025) {
+                window.open("https://samaarajewelry.com/aboutphone.html", "_self")
+            }
+        }
+    </script>
+    <script>
+        $(window).on("load", function() {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+</body>
+
+</html>

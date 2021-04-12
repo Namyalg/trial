@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif">
+    <title>Samaara Jewellery - Precious Jewellery Personalized</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+
+    <p id="text"></p>
+
+    <script type="text/javascript">
+       
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+         var element = document.getElementById('text');
+         if (isMobile) {
+            location.replace("main.html");
+            //window.open("https://samaarajewelry.com/main.html", "_self")
+         } else {
+            location.replace("home.html");
+             //window.open("https://samaarajewelry.com/home.html", "_self")
+         }
+    </script>
+</body>
+
+</html>

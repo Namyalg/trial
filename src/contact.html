@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="aryan">
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif" sizes="16x16">
+    <title>Contact - Samaara Jewellery</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_4t826xaOUA06a6fwOwVCa');
+        })();
+    </script>
+    <script type="text/javascript">
+        function send_email(details){
+        
+        emailjs.send('contact_service', 'contact_form', details)
+            .then(function(response) {
+                //console.log(details.Email);
+            console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+            console.log('FAILED...', error);
+            });
+        
+        }
+        </script>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- bootstrapcdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- icon pack -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- tweenmax (greensock) cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+</head>
+
+<body>
+
+    <div class="loader"></div>
+    <style>
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            overflow: hidden;
+            background: #000 url('./images/loader.gif') no-repeat center center;
+            background-size: 500px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="contact.js"></script>
+    <div class="contact-container">
+        <div id="rc_logo">
+
+            <a href="home.html" id="homepage" title="Home"><img class="sam" src="images/samaaralogo1.png" style="width: 80px;"></a>
+            <!-- Swap this placeholder out for your logo image -->
+        </div>
+
+        <div class="rc_nav overlay" id="centered_nav">
+            <!-- <a href="index.html" title="Home" style="font-family: 'Playfair Display';"><img src="images/samaaralogo1.png" style="width: 80px;"></a> -->
+            <!-- <a href="about.html" title="Services" style="font-family: 'Playfair Display';">Home</a> -->
+            <a href="about.html" title="About Us" style="font-family: 'Playfair Display'; text-transform: uppercase;">Our Story</a>
+            <a href="catalog.html" title="Catalog" style="font-family: 'Playfair Display'; text-transform: uppercase;">Explore Our Work</a>
+            <a href="shop.html" title="Shop" style="font-family: 'Playfair Display'; text-transform: uppercase;">Jewellery Themes</a>
+            <a href="contact.html" title="Contact" style="font-family: 'Playfair Display'; text-transform: uppercase;">Contact us</a>
+            <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <!-- NAVIGATION STARTS -->
+
+        <!-- <div class="nav">
+                  <div class="menu-open">
+                        <ion-icon name="menu"></ion-icon>
+                  </div>
+                  <div class="brand">
+                        <span><a href="index.html"><img src="images/samaaralogo.png" style="width: 180px;"></a></span>
+                  </div>
+                  <div class="cart">
+                        <a href="shop.html"><img src="images/weddingicon.svg" style="width: 25px;" alt=""></a>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-close">
+                              <ion-icon name="close"></ion-icon>
+                        </div>
+                        <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="shop.html">Our Story</a></li>
+                              <li><a href="catalog.html">Jewellery Themes</a></li>
+                              <li><a href="about.html">Explore our work</a></li>
+                              <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <div class="media-menu">
+                              <ul>
+                                    <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                    <li><ion-icon name="logo-instagram"></ion-icon></li>
+                                    <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                    <li><ion-icon name="logo-pinterest"></ion-icon></li>
+                              </ul>
+                        </div>
+                  </div>
+            </div> -->
+
+        <!-- NAVIGATION ENDS -->
+
+        <!-- DATA SECTION STARS -->
+
+        <div class="about-hero">
+            <div class="container-fluid hero wow fadeInUp">
+                <h2 id="hero-title" style="color: white;">Contact Us</h2>
+            </div>
+
+            <!-- <style>
+                body,html{overflow-x: hidden;}
+            </style> -->
+
+            <div class="container content" style="z-index: 50; margin-top: 2%; font-family: kontora; font-weight: bold">
+                <p class="wow fadeInUp">Customized jewellery is all about creating a jewellery masterpiece just the way
+                    you wanted
+                    to. To do this, we would love to understand your ideas and thoughts around your dream
+                    jewellery. Upload a rough sketch, reference pictures, photos of your heirloom jewellery or
+                    write to us on what you have in mind. Our jewellery consultant will get in touch to discuss
+                    and understand the requirement further. So go on…and leave us your thoughts!</p>
+
+                <form>
+                    <div class="form-group">
+                        <label>Name</label><br>
+                        <input type="text" id="client-name" />
+                        <!--<p id="client" style="color: rgb(102, 101, 101);">Client Name</p>-->
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label><br>
+                        <input type="email" id="client-email" />
+                        <!--<p id="client" style="color: rgb(102, 101, 101);">Client Email</p>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label><br>
+                        <input type="text" id="client-no" />
+                        <!--<p id="client" style="color: rgb(102, 101, 101);">Client Phone</p>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="3" id="client-msg" class="form-control wow fadeInUp"
+                            data-wow-delay="0.8s"></textarea>
+                    </div>
+
+
+                </form>
+
+                <input type="file" id="files" name="files[]" onchange="uploadFile()" multiple />
+
+
+                <!--<button onclick="uploadFile()">Upload a file</button>-->
+
+                <br><p style="color : red">Kindly wait for an upload confirmation alert before pressing the submit button</p><br>
+                <div class="add-prod wow fadeInUp" data-wow-delay="0.2s" style="margin-top: 5%">
+                    <button onclick="store_data()">SUBMIT</button>
+                </div>
+
+               
+            </div>
+        </div>
+
+        <!-- DATA SECTION ENDS -->
+
+        <!-- FOOTER STARTS -->
+
+        <div class="container-fluid footer">
+            <div class="section container">
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-3 block">
+                            <p id="address">Samaara Jewellery, Old Airport road,
+                                <br> Bangalore – 17,
+                                <br> India
+                            </p>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <a href="faq.html">
+                                <p style="color: black">FAQs
+                                    <!-- <br> Return Policy -->
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <!-- <p>Press & Media
+                                <br> Shipping
+                            </p> -->
+                        </div>
+                        <div class="col-lg-3 block">
+                            <div class="media">
+                                <ul>
+                                    <li>
+                                        <a class="logos" href="www.facebook.com/samaarajewellery">
+                                            <ion-icon name="logo-facebook" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="logos" href="www.instagram.com/samaara.jewellery">
+                                            <ion-icon name="logo-instagram" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <style>
+                                        .logos {
+                                            text-decoration: none;
+                                            color: black;
+                                            font-size: 20px;
+                                        }
+                                    </style>
+                                    <!-- <li>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                    </li>
+                                    <li>
+                                        <ion-icon name="logo-pinterest"></ion-icon>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- FOOTER ENDS -->
+    </div>
+
+    <script type="text/javascript">
+        //Scroll reveal animations
+
+        new WOW().init();
+
+        //Scroll activated background change
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".nav");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+        //Toggle MENU
+
+        var t1 = new TimelineMax({
+            paused: true
+        });
+        t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+        });
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", function () {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function () {
+            t1.reversed(!t1.reversed());
+        });
+
+        function myFunction() {
+            var x = document.getElementById("centered_nav");
+            if (x.className === "rc_nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "rc_nav";
+            }
+        }
+    </script>
+    <script>
+        $(window).on("load", function () {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+    <script>
+        function Home() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            var element = document.getElementById('text');
+            var homepage = document.getElementById('homepage');
+            if (isMobile) {
+                if (homepage.onclick) {
+                    location.replace("main.html");
+                    //window.open("https://samaarajewelry.com/main.html", "_self")
+                }
+            } else {
+                if (homepage.onclick) {
+                    location.replace("home.html");
+                    //window.open("https://samaarajewelry.com/home.html", "_self")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

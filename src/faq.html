@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="aryan">
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif" sizes="16x16">
+    <title>FAQs - Samaara Jewellery</title>
+
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- bootstrapcdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- icon pack -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- tweenmax (greensock) cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+</head>
+
+<body>
+
+    <div class="loader"></div>
+    <style>
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            overflow: hidden;
+            background: #000 url('./images/loader.gif') no-repeat center center;
+            background-size: 500px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="contact.js"></script>
+    <div class="contact-container">
+        <div id="rc_logo">
+
+            <a href="home.html" id="homepage" title="Home"><img class="sam" src="images/samaaralogo1.png"
+                    style="width: 80px;"></a>
+            <!-- Swap this placeholder out for your logo image -->
+        </div>
+
+        <div class="rc_nav overlay" id="centered_nav">
+
+            <a href="about.html" title="About Us"
+                style="font-family: 'Playfair Display'; text-transform: uppercase;">Our Story</a>
+            <a href="catalog.html" title="Catalog"
+                style="font-family: 'Playfair Display'; text-transform: uppercase;">Explore Our Work</a>
+            <a href="shop.html" title="Shop"
+                style="font-family: 'Playfair Display'; text-transform: uppercase;">Jewellery Themes</a>
+            <a href="contact.html" title="Contact"
+                style="font-family: 'Playfair Display'; text-transform: uppercase;">Contact us</a>
+            <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <section>
+            <div class="about-hero">
+                <div class="container-fluid hero wow fadeInUp">
+                    <h1 id="Faq" style="color: white;">FAQs</h1>
+                </div>
+
+                <div class="container content">
+                    <p class="wow fadeInUp"> <span style="font-weight: bold; color: #000;"> Frequently Asked
+                            Questions</span>
+                    <div class="accordion">
+                        <div class="accordion-item" id="question1">
+                            <a class="accordion-link" href="#question1">
+                                What exactly is customized jewellery?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    Customized jewellery is any piece of jewellery that is created specifically to suit
+                                    your individual taste and specific requirement. A lot of our clients share their
+                                    ideas and designs with us and explain in detail their specifications. The end
+                                    jewellery is made keeping their needs in mind. We also consult our clients on what
+                                    kind of customization would suit them the best.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question2">
+                            <a class="accordion-link" href="#question2">
+                                What karatage of gold is used in the jewellery and is it certified?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    We use 18kt and 22kt gold depending on the type of jewellery being made. The
+                                    jewellery comes with the BIS Hallmarking certifying the purity of the gold used.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="question3">
+                            <a class="accordion-link" href="#question3">
+                                Are the diamonds certified?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    All diamonds above 0.30 cents (each stone) comes with the international GIA
+                                    certificate which globally accepted. Diamonds below 0.30 cents come along with
+                                    details of the total,no of diamonds used along with its weight.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question4">
+                            <a class="accordion-link" href="#question4">
+                                Can we give our old gold and get new jewellery made?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    Yes. When you give us your old jewellery, we first melt and purify the same and let
+                                    you know the available gold. The purified gold is then used in making the new
+                                    jewellery.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question5">
+                            <a class="accordion-link" href="#question5">
+                                What is your return policy?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    Given that we create customized pieces of jewellery, the piece is very unique to
+                                    your requirements. However, we value your intent of return, and can make use of the
+                                    jewellery (melt the gold, re-use diamonds) in creating a new piece of you. The point
+                                    of deduction would be just the making charge. Unlike retail, we refrain from buying
+                                    back jewellery and reselling the same.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question6">
+                            <a class="accordion-link" href="#question6">
+                                How can I place an order?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    a. Call the number on the website, discuss your requirement and place the order via
+                                    call. <br>
+                                    b. Drop an email and place the order. <br>
+                                    c. Request for an in-person consultation and place your order.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question7">
+                            <a class="accordion-link" href="#question7">
+                                Do you source your jewellery or manufacture it yourself?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    We have our own manufacturing unit in Bangalore and our jewellery is mostly
+                                    handmade.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question8">
+                            <a class="accordion-link" href="#question8">
+                                Do you deliver across India?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    Yes, we do deliver our products all across India. A nominal delivery charge will be
+                                    borne by you to receive the jewellery.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question9">
+                            <a class="accordion-link" href="#question9">
+                                What is the estimated time taken to make a jewellery?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    We normally take around a week to 10days of time to make basic jewellery. Depending
+                                    on the design and kind of work , we might sometimes take a little more. We however,
+                                    always keep you posted on the delivery timelines and also ensure the desired
+                                    delivery date is met.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="question10">
+                            <a class="accordion-link" href="#question10">
+                                What are the payment timelines?
+                                <ion-icon id="add" name="add"></ion-icon>
+                                <ion-icon id="remove" name="remove"></ion-icon>
+                            </a>
+                            <div class="answer">
+                                <p style="font-family: kontora; color: #ABAAA7;">
+                                    50% advance to be made at the time of order booking and 50% at the time of order
+                                    delivery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="wow fadeInUp"> <span style="font-weight: bold; color: #000;"> Frequently Asked
+                            Questions</span>
+
+                </div>
+            </div>
+        </section>
+        <!-- DATA SECTION ENDS -->
+
+        <!-- FOOTER STARTS -->
+
+        <div class="container-fluid footer">
+            <div class="section container">
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-3 block">
+                            <p id="address">Samaara Jewellery, Old Airport road,
+                                <br> Bangalore – 17,
+                                <br> India
+                            </p>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <a href="faq.html">
+                                <p style="color: black">FAQs
+                                    <!-- <br> Return Policy -->
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 block">
+                            <!-- <p>Press & Media
+                                <br> Shipping
+                            </p> -->
+                        </div>
+                        <div class="col-lg-3 block">
+                            <div class="media">
+                                <ul>
+                                    <li>
+                                        <a class="logos" href="https://www.facebook.com/samaarajewellery">
+                                            <ion-icon name="logo-facebook" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="logos" href="https://www.instagram.com/samaara.jewellery">
+                                            <ion-icon name="logo-instagram" style="color: black;"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <style>
+                                        .logos {
+                                            text-decoration: none;
+                                            color: black;
+                                            font-size: 20px;
+                                        }
+                                    </style>
+                                    <!-- <li>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                    </li>
+                                    <li>
+                                        <ion-icon name="logo-pinterest"></ion-icon>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- FOOTER ENDS -->
+    </div>
+
+    <script type="text/javascript">
+        //Scroll reveal animations
+
+        new WOW().init();
+
+        //Scroll activated background change
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".nav");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+        //Toggle MENU
+
+        var t1 = new TimelineMax({
+            paused: true
+        });
+        t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+        });
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", function () {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function () {
+            t1.reversed(!t1.reversed());
+        });
+
+        function myFunction() {
+            var x = document.getElementById("centered_nav");
+            if (x.className === "rc_nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "rc_nav";
+            }
+        }
+    </script>
+    <script>
+        $(window).on("load", function () {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+    <!-- <script>
+        window.onload = function getResolution() {
+            // alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+            if (screen.width <= 1025) {
+                window.open("https://samaarajewelry.com/indexphonemain.html", "_self")
+            }
+        }
+    </script> -->
+    <script>
+        function Home() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            var element = document.getElementById('text');
+            var homepage = document.getElementById('homepage');
+            if (isMobile) {
+                if (homepage.onclick) {
+                    window.open("https://samaarajewelry.com/main.html", "_self")
+                }
+            } else {
+                if (homepage.onclick) {
+                    window.open("https://samaarajewelry.com/home.html", "_self")
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

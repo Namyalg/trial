@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom-Made: Samaara Jewellery</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="icon" href="images/samaaralogo.jpg" type="image/gif" sizes="16x16">
+    <!-- Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"> -->
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <style>
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            overflow: hidden;
+            background: #000 url('./images/loader.gif') no-repeat center center;
+            background-size: 500px;
+        }
+    </style>
+
+    <div class="text-slider-wrapper">
+        <div class="text-slider">
+            <div class="text-slide">
+                <h1>Beauty.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Authentic.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Elegance.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Eternal.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Exclusive.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Empress.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Queen.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Pretty.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Princess.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Cinzel.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Belleza.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Lady.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Armada.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Charm.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Velvet.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Delight.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Luxury.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Nature.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Chic.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Transformative.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Collage.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Lovely.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Trance.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Perfect.</h1>
+            </div>
+            <div class="text-slide">
+                <h1>Occasion.</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-control">
+        <div class="prev"><button type="button">
+                        <ion-icon name="arrow-back"></ion-icon>
+                  </button></div>
+        <div class="next"><button type="button">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                  </button></div>
+    </div>
+
+    <div class="blocks">
+        <div class="block-1"></div>
+        <div class="block-2"></div>
+        <div class="block-3"></div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="image-slider">
+        <div class="image-slide" id="one" onclick="location.href='#portfolio-item-1'">
+            <img src="images/ringinsta1.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="two" onclick="location.href='#portfolio-item-2'">
+            <img src="images/ringinsta2.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="three" onclick="location.href='#portfolio-item-3'">
+            <img src="images/ringinsta3.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="four" onclick="location.href='#portfolio-item-4'">
+            <img src="images/ringinsta4.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="five" onclick="location.href='#portfolio-item-5'">
+            <img src="images/ringinsta5.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="six" onclick="location.href='#portfolio-item-6'">
+            <img src="images/ringinsta6.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="seven" onclick="location.href='#portfolio-item-7'">
+            <img src="images/ringinsta7.jpg" style="width: 550px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="eight" onclick="location.href='#portfolio-item-8'">
+            <img src="images/Web-main-images/samaaramainimages/Classicmain/20.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="nine" onclick="location.href='#portfolio-item-9'">
+            <img src="images/Web-main-images/samaaramainimages/Classicmain/21.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="ten" onclick="location.href='#portfolio-item-10'">
+            <img src="images/Web-main-images/samaaramainimages/Classicmain/17.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="eleven" onclick="location.href='#portfolio-item-11'">
+            <img src="images/Web-main-images/samaaramainimages/Classicmain/8.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twelve" onclick="location.href='#portfolio-item-12'">
+            <img src="images/Web-main-images/samaaramainimages/Classicmain/19.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="thirteen" onclick="location.href='#portfolio-item-13'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/1.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="fourteen" onclick="location.href='#portfolio-item-14'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/7.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="fifteen" onclick="location.href='#portfolio-item-15'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/10.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="sixteen" onclick="location.href='#portfolio-item-16'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/13.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="seventeen" onclick="location.href='#portfolio-item-17'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/19.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="eighteen" onclick="location.href='#portfolio-item-18'">
+            <img src="images/Web-main-images/samaaramainimages/samaarasus/22.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="nineteen" onclick="location.href='#portfolio-item-19'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/1.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twenty" onclick="location.href='#portfolio-item-20'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/2.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twentyone" onclick="location.href='#portfolio-item-21'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/9.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twentytwo" onclick="location.href='#portfolio-item-22'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/12.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twentythree" onclick="location.href='#portfolio-item-23'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/14.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twentyfour" onclick="location.href='#portfolio-item-24'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/16.jpg" style="width: 650px;" loading="lazy">
+        </div>
+        <div class="image-slide" id="twentyfive" onclick="location.href='#portfolio-item-25'">
+            <img src="images/Web-main-images/samaaramainimages/samaaratransform/21.jpg" style="width: 650px;" loading="lazy">
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <a href="home.html"><img src="images/samaaralogo.png" width="300px" alt=""></a>
+    </div>
+    <div class="instruction">
+        <p id="instruction">Click picture <br> to view full screen</p>
+    </div>
+    <div class="learn-more">
+        <p id="learnpara">Interested?</p>
+        <a href="shop.html"><button id="learnmore">
+                        <p id="buttontext">Learn More</p>
+                  </button>
+            </a>
+    </div>
+
+    <!-----------------------------------------------Lightbox------------------------------------------------------------>
+
+
+
+    <div class="portfolio-lightbox" id="portfolio-item-1">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta1.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Beauty</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-2">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta2.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Authentic</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-3">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta3.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Elegance</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-4">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta4.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Eternal</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-5">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta5.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Exclusive</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-6">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta6.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Empress</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-7">
+        <div class="portfolio-lightbox__content1">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/ringinsta7.jpg" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Queen</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-8">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/Classicmain/20.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Pretty</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-9">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/Classicmain/21.jpg" style="width: 400px;" alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Princess</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-10">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/Classicmain/17.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Cinzel</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-11">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/Classicmain/8.jpg" style="width: 400px;"><h3 class="portfolio__title" style="font-family: hatlight;">Belleza</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-12">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/Classicmain/19.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Lady</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-13">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/1.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Armada</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-14">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/7.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Charm</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-15">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/10.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Velvet</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-16">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/13.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Delight</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-17">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/19.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Luxury</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-18">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaarasus/22.jpg" style="width: 400px;">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Nature</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-19">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/1.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Chic</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-20">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/2.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Transformative</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-21">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/9.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Collage</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-22">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/12.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Lovely</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-23">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/14.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Trance</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-24">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/16.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Perfect</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-lightbox" id="portfolio-item-25">
+        <div class="portfolio-lightbox__content2">
+            <a href="#" class="close"></a>
+            <img class="portfolio-lightbox__image" src="images/Web-main-images/samaaramainimages/samaaratransform/21.jpg"
+    style="width: 400px;"             alt="">
+            <h3 class="portfolio__title" style="font-family: hatlight;">Occasion</h3>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="slick.js"></script>
+    <script>
+        var sickPrimary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+            asNavFor: '.text-slider',
+            centerMode: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+        }
+
+        var sickSecondary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+            asNavFor: '.image-slider',
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+        }
+
+        $('.image-slider').slick(sickPrimary);
+        $('.text-slider').slick(sickSecondary);
+
+        window.onload = function getResolution() {
+            // alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+            if (screen.width <= 1025) {
+                window.open("https://samaarajewelry.com/catalogphone1.html", "_self")
+            }
+        }
+    </script>
+    <script>
+        $(window).on("load", function() {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+   
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <center>
+        Admin email : <input type="text" id="email"> 
+        <br><br><br>
+        New password : <input type="password" id="pswd"> 
+        <br><br><br>
+        <input type="checkbox" onclick="display()">Show Password
+        <br><br><br>
+        <button id="setpswd" onclick="setpwd()">Set new password</button>
+        <br><br><br>
+        <button id="backtologin" onclick="loginpage()">Back to login page</button>
+      
+    </center>
+    <script>
+        function loginpage(){
+            location.replace("login.html");
+        }
+
+        function setpwd(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {   
+            var resp = JSON.parse(this.responseText);
+            var firebaseConfig = {
+            apiKey: resp.apiKey,
+            authDomain : resp.authDomain,
+            projectId : resp.projectId,
+            databaseURL: resp.databaseURL,
+            storageBucket : resp.storageBucket,
+            messagingSenderId : resp.messagingSenderId,
+            appId : resp.appId,
+            };
+                if (!firebase.apps.length) {
+                firebase.initializeApp(firebaseConfig);
+                }else {
+                firebase.app(); // if already initialized, use that one
+                }
+                var file_url;
+                var database = firebase.database();
+                var auth_info = database.ref().child("Authorisation");
+                
+                var email = document.getElementById("email");
+                var ref = firebase.database().ref("Authorisation");
+                    ref.once("value").then(function(snapshot) {
+                        var key = snapshot.val(); 
+
+                        if(key.Email == email.value){
+                            //location.replace("get-contact-info.html");
+                            var updates = {};
+                            updates['/Authorisation/Password'] = document.getElementById("pswd").value;
+                                if (firebase.database().ref().update(updates)){
+                                    alert("Password is successfully changed");
+                                    location.reload();
+                                }
+                                else{
+                                    alert("Try again");
+                                }
+                            }
+                        else{
+                            alert("Enter valid credentials");
+                            location.reload();                
+                        }
+                    
+                    });
+            
+            }    
+        }
+        xhttp.open("GET", `/.netlify/functions/fetch-api-keys`, true);
+        xhttp.send();
+        }
+
+        function display() {
+            var x = document.getElementById("pswd");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+    </script>
+    </body>
+</html>

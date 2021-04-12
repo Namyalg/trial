@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+   
+    </head>
+    <body oncontextmenu="return false">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <center>
+        Admin email : <input type="text" id="email"> 
+        <br><br><br>
+        Password : <input type="password" id="pswd">
+        <br><br>
+
+<!-- An element to toggle between password visibility -->
+        <input type="checkbox" onclick="display()">Show Password
+        <br><br><br>
+     
+        <button id="login" onclick="login()">Login</button>
+        <br><br>
+        <button id="changepswd" onclick="changepassword()">Change password</button>
+        <br><br><br>
+    </center>
+    <script>
+
+        function display() {
+        var x = document.getElementById("pswd");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+            }
+        }
+
+function login(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {   
+      var resp = JSON.parse(this.responseText);
+      var firebaseConfig = {
+      apiKey: resp.apiKey,
+      authDomain : resp.authDomain,
+      projectId : resp.projectId,
+      databaseURL: resp.databaseURL,
+      storageBucket : resp.storageBucket,
+      messagingSenderId : resp.messagingSenderId,
+      appId : resp.appId,
+      };
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }else {
+          firebase.app(); // if already initialized, use that one
+        }
+        var file_url;
+        var database = firebase.database();
+        var auth_info = database.ref().child("Authorisation");
+      
+        //function login(){
+            var email = document.getElementById("email");
+            var pswd = document.getElementById("pswd");
+            // alert(auth_info.key);
+            // if(email == auth_info.Email && pswd == auth_info.Password){
+            //     alert("success");
+            //     location.replace("get-contact-info.html");
+            // }
+            var ref = firebase.database().ref("Authorisation");
+            ref.once("value")
+            .then(function(snapshot) {
+            var key = snapshot.val(); 
+
+            if(key.Email == email.value && key.Password == pswd.value){
+                location.replace("get-contact-info.html");
+            }
+            else{
+                alert("Enter valid credentials");
+                location.reload();                
+            }
+            //var childKey = snapshot.child("name/last").key; // "last"
+            });
+            sessionStorage.setItem('authemail', email);
+            sessionStorage.setItem('authpswd', pswd);
+            
+    }    
+  }
+  xhttp.open("GET", `/.netlify/functions/fetch-api-keys`, true);
+  xhttp.send();
+}
+        
+
+ 
+        function changepassword(){
+            var conf = confirm("Are you sure you want to change the password ?");
+            if (conf){
+                location.replace("changepswd.html");
+            }
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+@font-face {
+    font-family: kontora;
+    src: url(/assets/fonts/kontora.otf);
+}
+
+@font-face {
+    font-family: hatlight;
+    src: url(/assets/fonts/hatlight.otf);
+}
+
+@font-face {
+    font-family: made;
+    src: url(/assets/fonts/made.otf);
+}
+
+p {
+    font-size: 23px;
+}
+
+.main-bg {
+    background-size: cover;
+}
+
+.main-div {
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+.samples {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+.frame0-phone {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame1-phone {
+    display: block;
+    /* position: relative; */
+    /* left: -43.5%; */
+    /*margin-left: -26%;*/
+    margin-right: auto;
+    margin-left: auto;
+    width: 180%;
+    /*top: -40%;*/
+    margin-top: -100%;
+    margin: -28% auto 50px auto;
+    width: 350px;
+}
+
+.frame1-phone {
+    margin: -28% auto 50px auto;width: 350px;
+}
+
+.frame2-phone {
+
+    margin: -31% auto 50px auto;width: 350px; height:200px;
+    height:200px;
+}
+
+.frame3-phone {
+
+    margin: -27% auto 50px auto;width: 350px;
+    height:200px;
+}
+
+
+.btn:not(:disabled):not(.disabled) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    font-family: 'Playfair Display';
+}
+
+.shop {
+    width: 300px;
+    margin-left: 10%;
+}
+
+.shop p {
+    font-size: 24px;
+}
+
+.learnmore {
+    font-family: Playfair Display;
+    font-size: 15px;
+}
+
+.footer-clean {
+    margin-top: 10%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 1020px) {
+    .main-bg {
+        height: 134vh !important;
+    }
+
+    .frame1-phone {
+        margin: -10% auto 50px auto;
+        width: 31%;
+    }
+
+    .frame2-phone {
+   
+        margin: -10% auto 50px auto;
+        width: 45%; 
+        height:200px;
+    }
+
+    .frame3-phone {
+  
+        margin: -12% auto 50px auto;
+        width: 40%; 
+        height:200px;
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    .main-bg {
+        height: 134vh !important;
+    }
+
+    .frame1-phone {
+        margin: -13% auto 50px auto;
+        width: 42%;
+    }
+
+    .frame2-phone {
+   
+        margin: -13% auto 50px auto;
+        width: 57%; 
+        height:200px;
+    }
+
+    .frame3-phone {
+  
+        margin: -15% auto 50px auto;
+        width: 44%; 
+        height:200px;
+    }
+    
+    
+}
